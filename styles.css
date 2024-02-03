@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Google Sans";
+    src: url('./public/googlesans.woff2');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.5s;
+    font-family: "Google Sans", sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111927;
+    background-image: 
+    radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+    radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+    background-repeat: no-repeat;
+}
+
+.chatCard {
+    position: relative;
+    height: 500px;
+    padding-right: 5px;
+    width: 400px;
+    overflow-y: scroll;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(47, 47, 61, 0.768);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.059);
+}
+
+.chatCard .head {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00000024;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.left {
+    padding-left: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.left .name {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.fiftyper {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.fiftyper i {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.fiftyper i:hover {
+    color: rgb(108, 255, 206);
+    cursor: pointer;
+}
+
+.fiftyper a {
+    color: black;
+}
+
+.message_area {
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    max-height: calc(100% - 100px); /* Subtracting the height of head and input area */
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.user {
+    height: 32px;
+}
+
+.input_area {
+    position: sticky;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000024;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.message .text {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.263);
+    border-radius: 15px;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+}
+
+.input-area {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: 10px;
+}
+
+.input-area input {
+    color: rgb(133, 130, 130);
+    height: 100%;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.input-area .send {
+    height: 100%;
+    position: absolute;
+    width: 10%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: rgb(133, 130, 130);
+    cursor: pointer;
+    background-color:rgba(133, 130, 130, 0.41);
+}
+
+.input-area .send:hover {
+    background-color: rgba(133, 130, 130, 0.767);
+    color: rgb(0, 0, 0);
+}
+
+.sending {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+.loading {
+    position: absolute;
+    visibility: hidden;
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    display: flex; /* Add this line to make the dots visible */
+    align-items: center; /* Add this line to vertically center the dots */
+}
+
+.dot1, .dot2, .dot3 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 10px;
+    animation: fade 1s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0.5;
+    }
+    66% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.dot2 {
+    animation-delay: 0.33s;
+}
+
+.dot3 {
+    animation-delay: 0.66s;
+}
+
