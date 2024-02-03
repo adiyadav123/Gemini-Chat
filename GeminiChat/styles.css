@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Google Sans";
+    src: url('./public/googlesans.woff2');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.5s;
+    font-family: "Google Sans", sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111927;
+    background-image: 
+    radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+    radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+    background-repeat: no-repeat;
+}
+
+.chatCard {
+    position: relative;
+    height: 500px;
+    padding-right: 5px;
+    width: 400px;
+    overflow-y: scroll;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(47, 47, 61, 0.768);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.059);
+}
+
+.chatCard .head {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00000024;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.left {
+    padding-left: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.left .name {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.fiftyper {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+
+.fiftyper i {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.fiftyper i:hover {
+    color: rgb(108, 255, 206);
+    cursor: pointer;
+}
+
+.fiftyper a {
+    color: black;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.user {
+    height: 32px;
+}
+
+.message .text {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.263);
+    border-radius: 15px;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+}
+
+.input-area {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00000024;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: 10px;
+}
+
+.input-area input {
+    color: rgb(133, 130, 130);
+    height: 100%;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.input-area .send {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    color: rgb(133, 130, 130);
+    cursor: pointer;
+    background-color:rgba(133, 130, 130, 0.41);
+}
+
+.input-area .send:hover {
+    background-color: rgba(133, 130, 130, 0.767);
+    color: rgb(0, 0, 0);
+}
