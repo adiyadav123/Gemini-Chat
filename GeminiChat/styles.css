@@ -42,6 +42,8 @@ body {
 }
 
 .chatCard .head {
+    position: sticky;
+    top: 0;
     height: 50px;
     width: 100%;
     display: flex;
@@ -51,23 +53,26 @@ body {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
+
 .left {
     padding-left: 10px;
     width: 50%;
     display: flex;
     align-items: center;
 }
+
 .left .name {
     margin-left: 10px;
     margin-bottom: 5px;
     font-size: 20px;
 }
+
 .fiftyper {
     width: 50%;
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content:end;
+    justify-content: end;
 }
 
 .fiftyper i {
@@ -84,6 +89,11 @@ body {
     color: black;
 }
 
+.message_area {
+    overflow-y: scroll;
+    max-height: calc(100% - 100px); /* Subtracting the height of head and input area */
+}
+
 .message {
     display: flex;
     align-items: center;
@@ -93,6 +103,19 @@ body {
 
 .user {
     height: 32px;
+}
+
+.input_area {
+    position: sticky;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000024;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .message .text {
@@ -105,14 +128,15 @@ body {
 }
 
 .input-area {
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    z-index: 1;
     height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #00000024;
+    background-color: #000000;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     margin-top: 10px;
