@@ -8,7 +8,7 @@ Gemini Chat is a chatbot that provides a conversational interface for users. It 
 
 ## Getting Started
 
-To use Gemini Chat, simply visit the webpage at [GeminiChat](https://adiyadav123.github.io/Gemini-Chat/). 
+To use Gemini Chat, simply visit the webpage at [GeminiChat](https://geminichat.netlify.app/).
 
 ## Contact
 
