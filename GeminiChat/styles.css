@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Google Sans";
-    src: url('./public/googlesans.woff2');
+    src: url('/googlesans.woff2');
 }
 
 *{
@@ -122,7 +122,7 @@ body {
 .message .text {
     margin-left: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.263);
+    background-color: rgba(255, 255, 255, 0.556);
     border-radius: 15px;
     backdrop-filter: blur(25px) saturate(200%);
     -webkit-backdrop-filter: blur(25px) saturate(200%);

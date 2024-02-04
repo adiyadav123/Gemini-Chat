@@ -22,7 +22,7 @@ button.addEventListener("click", async () => {
   if (!input.value) return alert("Please enter a prompt");
   var prompt = input.value;
   message_area.innerHTML += `<div class="message user-message">
-  <div class="img"><img class="user" src="./public/my_face-removebg-preview.png" alt=""></div>
+  <div class="img"><img class="user" src="/my_face-removebg-preview.png" alt=""></div>
   <div class="text">${prompt}</div>
   </div>`;
   loader.style.visibility = "visible";
@@ -142,8 +142,9 @@ button.addEventListener("click", async () => {
     loader.style.visibility = "hidden";
     prompt = "";
     input.value = "";
+    message_area.scrollTop = message_area.scrollHeight - message_area.clientHeight; // Navigate to the top of currently added innerHTML
     return message_area.innerHTML += `<div class="message ai-message">
-  <div class="img"><img src="./public/logo.png" alt=""></div>
+  <div class="img"><img src="/logo.png" alt=""></div>
   <div class="text">${error.message}</div>
 </div>`;
      
@@ -168,7 +169,7 @@ button.addEventListener("click", async () => {
     );
     loader.style.visibility = "hidden";
     message_area.innerHTML += `<div class="message ai-message">
-    <div class="img"><img src="./public/logo.png" alt=""></div>
+    <div class="img"><img src="/logo.png" alt=""></div>
     <div class="text">${formattedTextWithLinks}</div>
   </div>`;
     message_area.scrollTop = message_area.scrollHeight - message_area.clientHeight; // Navigate to the top of currently added innerHTML
