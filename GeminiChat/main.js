@@ -33,23 +33,6 @@ button.addEventListener("click", async () => {
     history: [
       {
         role: "user",
-        parts: "Send me responses in less than 50 words.",
-      },
-      {
-        role: "model",
-        parts: "Okay, I will try to keep my responses short.",
-      },
-      {
-        role: "user",
-        parts:
-          "If someone will ask for large response, then say that your response is limited to 100 words by your owner/creator.",
-      },
-      {
-        role: "model",
-        parts: "Understood. I will do that.",
-      },
-      {
-        role: "user",
         parts:
           "Who is your owner/creator?, Do you know?, You are created by Aditya. His github link is https://github.com/adiyadav123",
       },
